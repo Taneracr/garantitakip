@@ -18,3 +18,23 @@ C:\Users\yusuf\OneDrive\Masaüstü\C#\garantitakip\garantiTakip\garantiTakip\obj
 C:\Users\yusuf\OneDrive\Masaüstü\C#\garantitakip\garantiTakip\garantiTakip\obj\Debug\garantiTakip.FrmSatısEkle.resources
 C:\Users\yusuf\OneDrive\Masaüstü\C#\garantitakip\garantiTakip\garantiTakip\obj\Debug\garantiTakip.FrmSifreGüncelle.resources
 C:\Users\yusuf\OneDrive\Masaüstü\C#\garantitakip\garantiTakip\garantiTakip\obj\Debug\garantiTakip.Secenekler.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.csproj.AssemblyReference.cache
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.AnasayfaFrm.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.Form1.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.FrmAra.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.frmHizmetTuru.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.FrmSatısEkle.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.FrmSifreGüncelle.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.Properties.Resources.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.Secenekler.resources
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.csproj.GenerateResource.cache
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.csproj.CoreCompileInputs.cache
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.exe
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.pdb
+D:\Garntitkp\Staj Dosyası.docx\bin\Debug\garantiTakip.exe.config
+D:\Garntitkp\Staj Dosyası.docx\bin\Debug\garantiTakip.exe
+D:\Garntitkp\Staj Dosyası.docx\bin\Debug\garantiTakip.pdb
+D:\Garntitkp\Staj Dosyası.docx\bin\Debug\EntityFramework.xml
+D:\Garntitkp\Staj Dosyası.docx\bin\Debug\EntityFramework.SqlServer.xml
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.csproj.CopyComplete
+D:\Garntitkp\Staj Dosyası.docx\obj\Debug\garantiTakip.frmListele.resources

@@ -87,6 +87,16 @@ namespace garantiTakip
                 MessageBox.Show("Kayıt Bulunamadı","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
+
+        private void txtTemizle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }    
             
         

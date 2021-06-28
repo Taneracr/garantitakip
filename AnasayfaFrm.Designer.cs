@@ -30,6 +30,7 @@ namespace garantiTakip
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.RbPasif = new System.Windows.Forms.RadioButton();
             this.RbAktif = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
@@ -91,7 +92,6 @@ namespace garantiTakip
             this.txtYetkiliSoyad = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtYetkiliAd = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -127,6 +127,14 @@ namespace garantiTakip
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1211, 205);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(959, 11);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(236, 28);
+            this.dateTimePicker1.TabIndex = 19;
             // 
             // RbPasif
             // 
@@ -186,6 +194,7 @@ namespace garantiTakip
             this.txtTemizle.TabIndex = 13;
             this.txtTemizle.Text = "Temizle";
             this.txtTemizle.UseVisualStyleBackColor = true;
+            this.txtTemizle.Click += new System.EventHandler(this.txtTemizle_Click);
             // 
             // label4
             // 
@@ -673,13 +682,6 @@ namespace garantiTakip
             this.txtYetkiliAd.Name = "txtYetkiliAd";
             this.txtYetkiliAd.Size = new System.Drawing.Size(236, 28);
             this.txtYetkiliAd.TabIndex = 7;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(959, 11);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(236, 28);
-            this.dateTimePicker1.TabIndex = 19;
             // 
             // AnasayfaFrm
             // 
