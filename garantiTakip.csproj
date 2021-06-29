@@ -93,6 +93,12 @@
     <Compile Include="FrmSatısEkle.Designer.cs">
       <DependentUpon>FrmSatısEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSektor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSektor.Designer.cs">
+      <DependentUpon>FrmSektor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSifreGüncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSatısEkle.resx">
       <DependentUpon>FrmSatısEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSektor.resx">
+      <DependentUpon>FrmSektor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSifreGüncelle.resx">
       <DependentUpon>FrmSifreGüncelle.cs</DependentUpon>
