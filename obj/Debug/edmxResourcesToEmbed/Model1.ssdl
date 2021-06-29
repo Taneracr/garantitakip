@@ -94,7 +94,6 @@
       <PropertyRef Name="IND" />
     </Key>
     <Property Name="IND" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FIRMANO" Type="int" />
     <Property Name="STATUS" Type="bit" />
   </EntityType>
   <EntityType Name="tbl_user">

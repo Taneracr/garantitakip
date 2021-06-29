@@ -39,6 +39,7 @@
     <EntitySet Name="tbl_marka" EntityType="stajyerModel.tbl_marka" />
     <EntitySet Name="tbl_sektor" EntityType="stajyerModel.tbl_sektor" />
     <EntitySet Name="tbl_status" EntityType="stajyerModel.tbl_status" />
+    <EntitySet Name="tbl_user" EntityType="stajyerModel.tbl_user" />
     <EntitySet Name="tbl_Yetkili" EntityType="stajyerModel.tbl_Yetkili" />
     <EntitySet Name="ViewCari" EntityType="stajyerModel.ViewCari" />
     <AssociationSet Name="FK_tbl_cari_tbl_baslangicBitisTarih" Association="stajyerModel.FK_tbl_cari_tbl_baslangicBitisTarih">
@@ -69,7 +70,6 @@
       <End Role="tbl_cari" EntitySet="tbl_cari" />
       <End Role="tbl_marka" EntitySet="tbl_marka" />
     </AssociationSet>
-    <EntitySet Name="tbl_user" EntityType="stajyerModel.tbl_user" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -188,9 +188,18 @@
       <PropertyRef Name="IND" />
     </Key>
     <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FIRMANO" Type="Int32" />
     <Property Name="STATUS" Type="Boolean" />
     <NavigationProperty Name="tbl_cari" Relationship="stajyerModel.FK_tbl_cari_tbl_status" FromRole="tbl_status" ToRole="tbl_cari" />
+  </EntityType>
+  <EntityType Name="tbl_user">
+    <Key>
+      <PropertyRef Name="IND" />
+    </Key>
+    <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KULLANICIADI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tbl_Yetkili">
     <Key>
@@ -365,14 +374,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="tbl_user">
-    <Key>
-      <PropertyRef Name="IND" />
-    </Key>
-    <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="SOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="KULLANICIADI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
 </Schema>

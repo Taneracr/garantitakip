@@ -35,9 +35,9 @@ namespace garantiTakip
         public virtual DbSet<tbl_marka> tbl_marka { get; set; }
         public virtual DbSet<tbl_sektor> tbl_sektor { get; set; }
         public virtual DbSet<tbl_status> tbl_status { get; set; }
+        public virtual DbSet<tbl_user> tbl_user { get; set; }
         public virtual DbSet<tbl_Yetkili> tbl_Yetkili { get; set; }
         public virtual DbSet<ViewCari> ViewCari { get; set; }
-        public virtual DbSet<tbl_user> tbl_user { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

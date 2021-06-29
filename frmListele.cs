@@ -17,6 +17,7 @@ namespace garantiTakip
             InitializeComponent();
         }
         stajyerEntities3 baglanti = new stajyerEntities3();
+
         private void frmListele_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = baglanti.tbl_cari.Select(x => new {x.IND,x.FIRMAKODU,x.FIRMAADI,x.YETKILI,x.VERGIDAIRESI,x.VERGINO,x.KAYITTARIHI,x.ISKONTO,

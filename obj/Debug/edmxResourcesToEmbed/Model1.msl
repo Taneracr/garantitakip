@@ -125,7 +125,17 @@
       <EntityTypeMapping TypeName="stajyerModel.tbl_status">
         <MappingFragment StoreEntitySet="tbl_status">
           <ScalarProperty Name="STATUS" ColumnName="STATUS" />
-          <ScalarProperty Name="FIRMANO" ColumnName="FIRMANO" />
+          <ScalarProperty Name="IND" ColumnName="IND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_user">
+      <EntityTypeMapping TypeName="stajyerModel.tbl_user">
+        <MappingFragment StoreEntitySet="tbl_user">
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
           <ScalarProperty Name="IND" ColumnName="IND" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -210,17 +220,6 @@
           <ScalarProperty Name="Expr4" ColumnName="Expr4" />
           <ScalarProperty Name="AD" ColumnName="AD" />
           <ScalarProperty Name="Expr3" ColumnName="Expr3" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tbl_user">
-      <EntityTypeMapping TypeName="stajyerModel.tbl_user">
-        <MappingFragment StoreEntitySet="tbl_user">
-          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
-          <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
-          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
-          <ScalarProperty Name="AD" ColumnName="AD" />
-          <ScalarProperty Name="IND" ColumnName="IND" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

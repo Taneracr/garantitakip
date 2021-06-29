@@ -42,22 +42,59 @@ namespace garantiTakip
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int a = int.Parse(textBox3.Text);
+            try
+            {
+                int a = int.Parse(textBox3.Text);
+                if (textBox3.Text != null)
+                {
 
-            var sil = baglanti.tbl_hizmetturu.Where(w => w.IND == a).FirstOrDefault();
-            baglanti.tbl_hizmetturu.Remove(sil);
-            baglanti.SaveChanges();
-            frmHizmetTuru_Load(sender,e);
+
+                    var sil = baglanti.tbl_hizmetturu.Where(w => w.IND == a).FirstOrDefault();
+                    baglanti.tbl_hizmetturu.Remove(sil);
+                    baglanti.SaveChanges();
+                    frmHizmetTuru_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt Bulunamadı");
+                }
+            }
+            catch 
+            {
+
+                MessageBox.Show("Kayıt Bulunamadı");
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int b = int.Parse( textBox3.Text);
-            var guncelle = baglanti.tbl_hizmetturu.Where(w => w.IND == b).FirstOrDefault();
-            guncelle.FIRMANO = int.Parse( textBox1.Text);
-            guncelle.HIZMETTURU = textBox2.Text;
-            baglanti.SaveChanges();
-            frmHizmetTuru_Load(sender, e);
+
+            try
+            {
+                int b = int.Parse(textBox3.Text);
+                if (textBox3.Text != null)
+                {
+                    
+                    var guncelle = baglanti.tbl_hizmetturu.Where(w => w.IND == b).FirstOrDefault();
+                    guncelle.FIRMANO = int.Parse(textBox1.Text);
+                    guncelle.HIZMETTURU = textBox2.Text;
+                    baglanti.SaveChanges();
+                    frmHizmetTuru_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Kullanıcı Bulununamadı");
+                }
+            }
+            catch 
+            {
+
+                MessageBox.Show("Kullanıcı Bulunamadı");
+            }
+
+            
+            
 
         }
 
