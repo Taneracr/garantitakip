@@ -59,3 +59,4 @@ D:\garantitakip\obj\Debug\garantiTakip.exe
 D:\garantitakip\obj\Debug\garantiTakip.pdb
 D:\garantitakip\obj\Debug\garantiTakip.frmListele.resources
 D:\garantitakip\obj\Debug\garantiTakip.frmSil.resources
+D:\garantitakip\obj\Debug\garantiTakip.frmGuncelle.resources
