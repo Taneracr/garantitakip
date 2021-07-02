@@ -22,5 +22,10 @@ namespace garantiTakip
             AnasayfaFrm frm = new AnasayfaFrm();
             frm.Show();
         }
+
+        private void Secenekler_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
