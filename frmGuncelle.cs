@@ -96,7 +96,7 @@ namespace garantiTakip
             txtYetkili.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             comboFirmatipi.Text = (dataGridView1.CurrentRow.Cells[8].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[8].Value.ToString());
             comboSektor.Text = (dataGridView1.CurrentRow.Cells[12].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[12].Value.ToString());
-            txtSehir.Text = dataGridView1.CurrentRow.Cells[22].Value.ToString();
+            txtSehir.Text = (dataGridView1.CurrentRow.Cells[22].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[22].Value.ToString());
             txtTel.Text = dataGridView1.CurrentRow.Cells[16].Value.ToString();
             txtTel2.Text = dataGridView1.CurrentRow.Cells[17].Value.ToString();
             txtMail.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
@@ -111,7 +111,7 @@ namespace garantiTakip
             txtBaslangıcTarih.Value = (dataGridView1.CurrentRow.Cells[27].Value == null) ? DateTime.Now.Date : Convert.ToDateTime(dataGridView1.CurrentRow.Cells["BASLANGICTARİH"].Value);
             txtBitisTarih.Value = (dataGridView1.CurrentRow.Cells[28].Value == null) ? DateTime.Now.Date : Convert.ToDateTime(dataGridView1.CurrentRow.Cells[28].Value);
             txtYetkiliAd.Text = (dataGridView1.CurrentRow.Cells[9].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[9].Value.ToString());
-            txtYetkiliMail.Text = (dataGridView1.CurrentRow.Cells[29].Value == null) ? "": (dataGridView1.CurrentRow.Cells[29].Value.ToString());
+            txtYetkiliMail.Text = (dataGridView1.CurrentRow.Cells[29].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[29].Value.ToString());
             txtYetkiliTel.Text = (dataGridView1.CurrentRow.Cells[30].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[30].Value.ToString());
             txtyetkiliSoyadi.Text = (dataGridView1.CurrentRow.Cells[10].Value == null) ? "" : (dataGridView1.CurrentRow.Cells[10].Value.ToString());
             txtYetkiliDgmTarih.Value = (dataGridView1.CurrentRow.Cells[25].Value == null) ? DateTime.Now.Date : Convert.ToDateTime(dataGridView1.CurrentRow.Cells[25].Value);
@@ -166,6 +166,7 @@ namespace garantiTakip
                 if (sektor == null)
                 {
                     MessageBox.Show("SektörAdı Boş bırakılamaz");
+                    return;
                 }
                 else
                 {
@@ -184,6 +185,7 @@ namespace garantiTakip
                 if (hizmet == null)
                 {
                     MessageBox.Show("HizmetTürü Boş Bırakılamaz");
+                    return;
                 }
                 else
                 {
@@ -192,6 +194,7 @@ namespace garantiTakip
                 if (status == null)
                 {
                     MessageBox.Show("Status Boş Bırakılamaz");
+                    return;
                 }
                 else
                 {
@@ -221,6 +224,7 @@ namespace garantiTakip
                 if (comboParabirimi.Text == null)
                 {
                     MessageBox.Show("Para Birimi Seçmediniz");
+                    return;
                 }
                 else
                 {
@@ -250,7 +254,7 @@ namespace garantiTakip
                 db.Entry(guncelle).State = System.Data.Entity.EntityState.Modified; // Güncelleme Veritabanına belirtildi
 
                 int sonuc = db.SaveChanges();
-       
+
 
 
                 if (sonuc > 0)
@@ -259,7 +263,7 @@ namespace garantiTakip
                 }
                 else
                 {
-                    
+
                     MessageBox.Show("Güncelleme Başarısız");
                 }
             }
@@ -277,13 +281,13 @@ namespace garantiTakip
 
         }
 
-        
+
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dataGridView1.DataSource = db.tbl_cari.Where(r => r.FIRMAADI.Contains(textBox1.Text) || r.tbl_firmaTipi.FIRMATİPİ.Contains(textBox1.Text) || r.TELEFON1.Contains(textBox1.Text)).Select(x => new
+                dataGridView1.DataSource = db.tbl_cari.Where(r => r.FIRMAADI.Contains(textBox1.Text) || r.tbl_firmaTipi.FIRMATİPİ.Contains(textBox1.Text) || r.IL.Contains(textBox1.Text)).Select(x => new
                 {
                     x.IND,
                     x.FIRMAKODU,
@@ -324,7 +328,42 @@ namespace garantiTakip
             }
 
         }
-    
+
+        [System.ComponentModel.Browsable(false)]
+
+        public bool Modified { get; set; }
+       
+   
+
+        private void txtFirmaKod_TabIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Değişiklik yapıldı");
+            dataGridView1.Enabled = false;
+        }
+
+        
+        private void txtFirmaKod_Leave(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Listele();
+        }
+
+
+        //if (originalText != textBox1.Text)
+        //    // Set the Modified property to true to reflect the change.
+        //    textBox1.Modified = true;
+        //else
+        //    // Contents of textBox1 have not changed, reset the Modified property.
+        //    textBox1.Modified = false;
+
+
+
 
 
         // Temizleme

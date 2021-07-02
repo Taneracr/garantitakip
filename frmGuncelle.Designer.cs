@@ -31,6 +31,8 @@ namespace garantiTakip
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.comboFirmatipi = new System.Windows.Forms.ComboBox();
             this.comboSektor = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -79,6 +81,8 @@ namespace garantiTakip
             this.txtyetkiliSoyadi = new System.Windows.Forms.TextBox();
             this.txtYetkiliDgmTarih = new System.Windows.Forms.DateTimePicker();
             this.label24 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textUnvan = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtYetkiliMail = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -89,12 +93,9 @@ namespace garantiTakip
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblind = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textUnvan = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -108,7 +109,7 @@ namespace garantiTakip
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 93);
+            this.tabControl1.Location = new System.Drawing.Point(12, 81);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -120,10 +121,8 @@ namespace garantiTakip
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.comboFirmatipi);
             this.tabPage1.Controls.Add(this.comboSektor);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.RbPasif);
             this.tabPage1.Controls.Add(this.RbAktif);
             this.tabPage1.Controls.Add(this.label4);
@@ -153,6 +152,24 @@ namespace garantiTakip
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Firma Bilgileri";
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(799, 32);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(94, 21);
+            this.label27.TabIndex = 35;
+            this.label27.Text = "Kayıt Tarihi :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(848, 18);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(63, 21);
+            this.label26.TabIndex = 35;
+            this.label26.Text = "Bugün :";
+            // 
             // comboFirmatipi
             // 
             this.comboFirmatipi.FormattingEnabled = true;
@@ -171,10 +188,11 @@ namespace garantiTakip
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(899, 6);
+            this.dateTimePicker1.Location = new System.Drawing.Point(923, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(236, 28);
             this.dateTimePicker1.TabIndex = 19;
+            this.dateTimePicker1.Value = new System.DateTime(2021, 7, 2, 12, 30, 10, 0);
             // 
             // RbPasif
             // 
@@ -339,18 +357,21 @@ namespace garantiTakip
             this.txtFirmaKod.Name = "txtFirmaKod";
             this.txtFirmaKod.Size = new System.Drawing.Size(191, 28);
             this.txtFirmaKod.TabIndex = 20;
+            this.txtFirmaKod.TabIndexChanged += new System.EventHandler(this.txtFirmaKod_TabIndexChanged);
+            this.txtFirmaKod.Leave += new System.EventHandler(this.txtFirmaKod_Leave);
             // 
             // txtKayitTarih
             // 
-            this.txtKayitTarih.Location = new System.Drawing.Point(900, 102);
+            this.txtKayitTarih.Location = new System.Drawing.Point(899, 26);
             this.txtKayitTarih.Name = "txtKayitTarih";
             this.txtKayitTarih.Size = new System.Drawing.Size(236, 28);
             this.txtKayitTarih.TabIndex = 19;
+            this.txtKayitTarih.Value = new System.DateTime(2021, 7, 2, 12, 30, 34, 0);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(850, 226);
+            this.label11.Location = new System.Drawing.Point(849, 95);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 21);
             this.label11.TabIndex = 16;
@@ -358,7 +379,7 @@ namespace garantiTakip
             // 
             // txtUrl
             // 
-            this.txtUrl.Location = new System.Drawing.Point(900, 220);
+            this.txtUrl.Location = new System.Drawing.Point(899, 89);
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.Size = new System.Drawing.Size(236, 28);
             this.txtUrl.TabIndex = 15;
@@ -590,6 +611,22 @@ namespace garantiTakip
             this.label24.TabIndex = 16;
             this.label24.Text = "Doğum Tarihi:";
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(481, 114);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(62, 21);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "Ünvan :";
+            // 
+            // textUnvan
+            // 
+            this.textUnvan.Location = new System.Drawing.Point(567, 111);
+            this.textUnvan.Name = "textUnvan";
+            this.textUnvan.Size = new System.Drawing.Size(236, 28);
+            this.textUnvan.TabIndex = 13;
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -650,7 +687,7 @@ namespace garantiTakip
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(970, 477);
+            this.button4.Location = new System.Drawing.Point(1019, 436);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(155, 47);
             this.button4.TabIndex = 34;
@@ -660,59 +697,27 @@ namespace garantiTakip
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 418);
+            this.dataGridView1.GridColor = System.Drawing.Color.LightSeaGreen;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 406);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(905, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(959, 212);
             this.dataGridView1.TabIndex = 35;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // lblind
             // 
             this.lblind.AutoSize = true;
-            this.lblind.Location = new System.Drawing.Point(1042, 576);
+            this.lblind.Location = new System.Drawing.Point(1091, 577);
             this.lblind.Name = "lblind";
             this.lblind.Size = new System.Drawing.Size(61, 21);
             this.lblind.TabIndex = 36;
             this.lblind.Text = "label26";
             this.lblind.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(830, 12);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 21);
-            this.label26.TabIndex = 35;
-            this.label26.Text = "Bugün :";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(800, 108);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(94, 21);
-            this.label27.TabIndex = 35;
-            this.label27.Text = "Kayıt Tarihi :";
-            // 
-            // textUnvan
-            // 
-            this.textUnvan.Location = new System.Drawing.Point(566, 114);
-            this.textUnvan.Name = "textUnvan";
-            this.textUnvan.Size = new System.Drawing.Size(236, 28);
-            this.textUnvan.TabIndex = 13;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(503, 117);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 21);
-            this.label28.TabIndex = 14;
-            this.label28.Text = "Ünvan :";
             // 
             // textBox1
             // 
@@ -731,14 +736,27 @@ namespace garantiTakip
             this.label29.TabIndex = 38;
             this.label29.Text = "Ara :";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1019, 518);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 45);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Listele";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 641);
+            this.ClientSize = new System.Drawing.Size(1187, 641);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblind);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.tabControl1);
@@ -829,5 +847,6 @@ namespace garantiTakip
         private System.Windows.Forms.TextBox textUnvan;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button1;
     }
 }

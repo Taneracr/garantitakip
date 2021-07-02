@@ -115,5 +115,45 @@ namespace garantiTakip
                 RbPasif.Checked = false;
             }
         }
+
+        private void textBox3_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                dataGridView1.DataSource = db.tbl_cari.Where(r => r.FIRMAADI.Contains(textBox3.Text)  || r.ADI.Contains(textBox3.Text)).Select(x => new
+                {
+                    x.IND,
+                    x.FIRMAKODU,
+                    x.FIRMAADI,
+                    x.YETKILI,
+                    x.VERGIDAIRESI,
+                    x.VERGINO,
+                    x.KAYITTARIHI,
+                    x.ISKONTO,
+                    x.tbl_firmaTipi.FIRMATİPİ,
+                    x.ADI,
+                    x.SOYAD,
+                    x.UNVAN,
+                    x.tbl_sektor.SEKTORADI,
+                    x.MARKA,
+                    x.EMAIL,
+                    x.URL,
+                    x.TELEFON1,
+                    x.TELEFON2,
+                    x.ADRESFATURA,
+                    x.ADRESSEVK,
+                    x.PARABIRIMI,
+                    x.IL,
+                    x.SEHIR,
+                    x.PERSONELNO,
+                    x.tbl_status.STATUS,
+                    x.YETKİLİDGMTARİH,
+                    x.tbl_hizmetturu.HIZMETTURU,
+                    x.tbl_baslangicBitisTarih.BASLANGICTARİH,
+                    x.tbl_baslangicBitisTarih.BİTİSTARİH
+                }).ToList(); 
+            }
+        }
     }
 }

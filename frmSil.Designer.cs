@@ -46,6 +46,8 @@ namespace garantiTakip
             this.txtYetkili = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtFirmaKod = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,11 +211,30 @@ namespace garantiTakip
             this.txtFirmaKod.Size = new System.Drawing.Size(214, 28);
             this.txtFirmaKod.TabIndex = 19;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(910, 315);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(164, 28);
+            this.textBox3.TabIndex = 32;
+            this.textBox3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyUp);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(827, 322);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 21);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Ara :";
+            // 
             // frmSil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 665);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.RbPasif);
             this.Controls.Add(this.RbAktif);
             this.Controls.Add(this.label4);
@@ -261,5 +282,7 @@ namespace garantiTakip
         private System.Windows.Forms.TextBox txtYetkili;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtFirmaKod;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label7;
     }
 }

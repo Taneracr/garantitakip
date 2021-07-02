@@ -16,7 +16,7 @@ namespace garantiTakip
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GarantiDurumFrm());
+            Application.Run(new frmGuncelle());
         }
     }
 }
